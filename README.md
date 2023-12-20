@@ -52,7 +52,7 @@ T-Panel_ Lite is a streamlined version of T-Panel
 * FLASH: -MB
 * Others: For more information, please visit[Espressif Official ESP32-S3datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_cn.pdf)
 
-### 2. 480x480RGB pixel display screen
+### 2. 3.95 Inch 480x480RGB pixel display screen
 
 * Drive: ST7701S
 * Compatibility library: Arduino_GFX、lvgl
