@@ -53,7 +53,7 @@ T-Panel_Lite是T-Panel的精简版
 * FLASH：-MB
 * 其他说明：更多资料请访问[乐鑫官方ESP32­-S3 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_cn.pdf)
 
-### 2. 480x480RGB像素显示屏幕
+### 2. 3.95英寸480x480RGB像素显示屏幕
 
 * 驱动：ST7701S
 * 兼容库：Arduino_GFX、lvgl
