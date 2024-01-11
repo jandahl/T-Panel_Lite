@@ -1,10 +1,10 @@
 /*
  * @Description: T-Panel-Lite出厂测试程序
- * @version: V1.0.0
+ * @version: V1.0.1
  * @Author: LILYGO_L
  * @Date: 2023-09-19 14:36:58
  * @LastEditors: LILYGO_L
- * @LastEditTime: 2023-11-23 09:49:24
+ * @LastEditTime: 2024-01-11 13:52:53
  * @License: GPL 3.0
  */
 // #define TOUCH_MODULES_GT911
@@ -431,15 +431,18 @@ void setup()
     gfx->setCursor(100, 200);
     gfx->setTextSize(3);
     gfx->setTextColor(PURPLE);
-    gfx->printf("Please touch me!");
+    gfx->printf("Edge Detection");
+
+    gfx->drawRect(0, 0, 480, 480, RED);
 
     gfx->setTextSize(2);
     gfx->setTextColor(NAVY);
+
+    delay(1000);
 }
 
 void loop()
 {
-
     if (Display_Start == 1)
     {
         if (millis() > wifi_time_delay)
@@ -526,68 +529,67 @@ void loop()
         }
     }
 
-    if (Display_Start == 1)
+    if (digitalRead(KEY1) == 0)
     {
-        if (digitalRead(KEY1) == 0)
+        Display_Start = 1;
+        delay(100);
+        switch (Image_Flag)
         {
-            delay(100);
-            switch (Image_Flag)
-            {
-            case 0:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_1, 480, 480); // RGB
-                break;
-            case 1:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_2, 480, 480); // RGB
-                break;
-            case 2:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_3, 480, 480); // RGB
-                break;
-            case 3:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_4, 480, 480); // RGB
-                break;
-            case 4:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_5, 480, 480); // RGB
-                break;
+        case 0:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_1, 480, 480); // RGB
+            break;
+        case 1:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_2, 480, 480); // RGB
+            break;
+        case 2:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_3, 480, 480); // RGB
+            break;
+        case 3:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_4, 480, 480); // RGB
+            break;
+        case 4:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_5, 480, 480); // RGB
+            break;
 
-            default:
-                break;
-            }
-            Image_Flag++;
-            if (Image_Flag > 4)
-            {
-                Image_Flag = 0;
-            }
+        default:
+            break;
         }
-
-        if (digitalRead(KEY2) == 0)
+        Image_Flag++;
+        if (Image_Flag > 4)
         {
-            delay(100);
-            switch (Image_Flag)
-            {
-            case 0:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_1, 480, 480); // RGB
-                break;
-            case 1:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_2, 480, 480); // RGB
-                break;
-            case 2:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_3, 480, 480); // RGB
-                break;
-            case 3:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_4, 480, 480); // RGB
-                break;
-            case 4:
-                gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_5, 480, 480); // RGB
-                break;
+            Image_Flag = 0;
+        }
+    }
 
-            default:
-                break;
-            }
-            Image_Flag--;
-            if (Image_Flag < 0)
-            {
-                Image_Flag = 4;
-            }
+    if (digitalRead(KEY2) == 0)
+    {
+        Display_Start = 1;
+        delay(100);
+        switch (Image_Flag)
+        {
+        case 0:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_1, 480, 480); // RGB
+            break;
+        case 1:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_2, 480, 480); // RGB
+            break;
+        case 2:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_3, 480, 480); // RGB
+            break;
+        case 3:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_4, 480, 480); // RGB
+            break;
+        case 4:
+            gfx->draw16bitRGBBitmap(0, 0, (uint16_t *)gImage_5, 480, 480); // RGB
+            break;
+
+        default:
+            break;
+        }
+        Image_Flag--;
+        if (Image_Flag < 0)
+        {
+            Image_Flag = 4;
         }
     }
 }
