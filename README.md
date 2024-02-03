@@ -4,7 +4,7 @@
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
  * @LastEditors: LILYGO_L
- * @LastEditTime: 2023-11-24 16:32:40
+ * @LastEditTime: 2024-02-03 15:28:59
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel_Lite</h1>
@@ -20,7 +20,7 @@
 
 | Product                     | SOC           |  FLASH  |  PSRAM   | Link                   |
 | :------------------------: | :-----------: |:-------: | :---------: | :------------------: |
-| T-Panel_Lite_V1.0   | ESP32S3 |   -M   | -M  | [Not yet sold]()  |
+| T-Panel_Lite_V1.0   | ESP32S3 |   16M   | 8M  | [Not yet sold]()  |
 
 ## Directory
 - [Describe](#describe)
@@ -48,20 +48,29 @@ T-Panel_ Lite is a streamlined version of T-Panel
 ### 1.MCU Chip
 
 * Chip: ESP32-S3
-* PSRAM: -MB
-* FLASH: -MB
+* PSRAM: 8MB
+* FLASH: 16MB
 * Others: For more information, please visit[Espressif Official ESP32-S3datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_cn.pdf)
 
-### 2. 3.95 Inch 480x480RGB pixel display screen
+### 2. Screen
 
-* Drive: ST7701S
-* Compatibility library: Arduino_GFX、lvgl
-* Using bus communication protocol: SPI+RGB
-* Other instructions: Use XL95x5 IO expansion chip for SPI transmission, initialize the screen, and use RGB protocol for screen color drawing
+* Screen Model: YDP395BT001
+* Size: 3.95-inch
+* Resolution Ratio: 480x480px
+* Screen Type: IPS
+* Driver Chip: ST7701S
+* Using Bus Communication Protocol: Standard SPI+RGB
+* Other: Use XL95x5 IO expansion chip for Standard SPI transmission, initialize the screen, and use RGB protocol for screen color drawing
 
 ### 3. SD card slot
 
 ## QuickStart
+
+### Examples Support
+
+<p align="center" width="100%">
+    <img src="image/T-Panel-Lite_Example_Support.png" alt="example">
+</p>
 
 ### PlatformIO
 1. Install[VisualStudioCode](https://code.visualstudio.com/Download),Choose installation based on your system type.

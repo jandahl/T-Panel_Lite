@@ -4,7 +4,7 @@
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
  * @LastEditors: LILYGO_L
- * @LastEditTime: 2023-11-24 16:27:19
+ * @LastEditTime: 2024-02-03 15:22:18
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel_Lite</h1>
@@ -20,7 +20,7 @@
 
 | Product                     | SOC           |  FLASH  |  PSRAM   | Link                   |
 | :------------------------: | :-----------: |:-------: | :---------: | :------------------: |
-| T-Panel_Lite_V1.0   | ESP32S3 |   -M   | -M  |  [暂未售卖]()  |
+| T-Panel_Lite_V1.0   | ESP32S3 |   16M   | 8M  |  [暂未售卖]()  |
 
 ## 目录
 - [描述](#描述)
@@ -48,22 +48,31 @@ T-Panel_Lite是T-Panel的精简版
 
 ### 1. MCU芯片
 
-* 主芯片：ESP32-S3
-* PSRAM：-MB
-* FLASH：-MB
+* 芯片：ESP32-S3
+* PSRAM：8MB
+* FLASH：16MB
 * 其他说明：更多资料请访问[乐鑫官方ESP32­-S3 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_cn.pdf)
 
-### 2. 3.95英寸480x480RGB像素显示屏幕
+### 2. 屏幕
 
-* 驱动：ST7701S
-* 兼容库：Arduino_GFX、lvgl
-* 使用总线通信协议：SPI+RGB
-* 其他说明：使用XL95x5 IO扩展芯片进行SPI传输初始化屏幕后使用RGB协议进行屏幕色彩绘制
+* 屏幕型号：YDP395BT001
+* 尺寸：3.95英寸
+* 分辨率：480x480px
+* 屏幕类型：IPS
+* 驱动芯片：ST7701S
+* 使用总线通信协议：标准SPI+RGB
+* 其他说明：使用XL95x5 IO扩展芯片进行标准SPI传输初始化屏幕后使用RGB协议进行屏幕色彩绘制
 
 ### 3. SD卡槽
 
 
 ## 快速开始
+
+### 示例支持
+
+<p align="center" width="100%">
+    <img src="image/T-Panel-Lite_Example_Support.png" alt="example">
+</p>
 
 ### PlatformIO
 1. 安装[VisualStudioCode](https://code.visualstudio.com/Download)，根据你的系统类型选择安装。
@@ -89,6 +98,7 @@ T-Panel_Lite是T-Panel的精简版
 
 | Setting                               | Value                                 |
 | :-------------------------------: | :-------------------------------: |
+| Board                                | Dfrobot Firebeetle 2 ESP32-S3|
 | Upload Speed                     | 921600                               |
 | USB Mode                           | Hardware CDC and JTAG     |
 | USB CDC On Boot                | Enabled                             |
