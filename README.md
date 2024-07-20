@@ -3,8 +3,8 @@
  * @version: V1.0.0
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
- * @LastEditors: LILYGO_L
- * @LastEditTime: 2024-02-03 15:28:59
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-07-20 15:46:36
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel_Lite</h1>
@@ -35,7 +35,7 @@
 
 ## Describe
 
-T-Panel_ Lite is a streamlined version of T-Panel
+T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be paid to the fact that the screen included with the T-Panel_Lite version is a non-touch version screen.
 
 ## Preview
 
@@ -68,9 +68,19 @@ T-Panel_ Lite is a streamlined version of T-Panel
 
 ### Examples Support
 
-<p align="center" width="100%">
-    <img src="image/T-Panel-Lite_Example_Support.png" alt="example">
-</p>
+| Example | Support IDE And Version| Description | Picture |
+| ------  | ------  | ------ | ------ | 
+| [GFX_CST3240_Image](./examples/GFX_CST3240_Image) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
+| [GFX_PDQ](./examples/GFX_PDQ) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
+| [IIC_Scan_2](./examples/IIC_Scan_2) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
+| [SD](./examples/SD) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
+| [SD_MJPEG](./examples/SD_MJPEG) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
+| [T-Panel-Lite_Test](./examples/T-Panel-Lite_Test) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` | Out-of-factory initial test file |  |
+| [Wifi](./examples/Wifi) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
+
+| Firmware | Description | Picture |
+| ------  | ------  | ------ |
+| [Original Test V1.0.5](./firmware/[T-Panel-Lite_V1.0][T-Panel-Lite_Test]_firmware_V1.0.5.bin) | Change the visible pixel of the window to 450px with a green background |  |
 
 ### PlatformIO
 1. Install[VisualStudioCode](https://code.visualstudio.com/Download),Choose installation based on your system type.
@@ -154,13 +164,6 @@ T-Panel_ Lite is a streamlined version of T-Panel
 | SCLK                |         IO36         |
 | MOSI                |         IO35         |
 
-| Display Screen Touch Pin       | ESP32S3 Pin|
-| :------------------: | :------------------:|
-| INT         |         IO21        |
-| RST         |         IO4         |
-| SDA         |         IO17       |
-| SCL         |         IO18       |
-
 | SD Pin           | ESP32S3 Pin      |
 | :------------------: | :------------------:|
 | CS                     | IO34                  |
@@ -200,7 +203,6 @@ T-Panel_ Lite is a streamlined version of T-Panel
 ## Information
 * [Espressif](https://www.espressif.com/en/support/documents/technical-documents)
 * [YDP395BT001-V2](./information/YDP395BT001-V2.pdf)
-* [HYNITRON-CST3240_V1.0](./information/HYNITRON-CST3240_V1.0.pdf)
 * [ST7701S_SPEC_V1.4](./information/ST7701S_SPEC_V1.4.pdf)
 
 ## DependentLibraries

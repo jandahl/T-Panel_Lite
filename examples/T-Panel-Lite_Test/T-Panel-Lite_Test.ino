@@ -1,10 +1,8 @@
 /*
  * @Description: T-Panel-Lite出厂测试程序
- * @version: V1.0.2
  * @Author: LILYGO_L
  * @Date: 2023-09-19 14:36:58
- * @LastEditors: LILYGO_L
- * @LastEditTime: 2024-01-12 18:27:23
+ * @LastEditTime: 2024-07-20 15:57:48
  * @License: GPL 3.0
  */
 // #define TOUCH_MODULES_GT911
@@ -21,7 +19,7 @@
 #include <SPI.h>
 #include <SD.h>
 #include "TouchLib.h"
-#include "material_16Bit.h"
+#include "material_16bit.h"
 #include "pin_config.h"
 #include "WiFi.h"
 #include <HTTPClient.h>
@@ -103,7 +101,7 @@ void wifi_test(void)
     gfx->setTextColor(GREEN);
 
     Serial.println("\nScanning wifi");
-    gfx->printf("Scanning wifi\n");
+    gfx->printf("\n\n   Scanning wifi\n");
     WiFi.mode(WIFI_STA);
     WiFi.disconnect();
     delay(100);
@@ -111,16 +109,18 @@ void wifi_test(void)
     wifi_num = WiFi.scanNetworks();
     if (wifi_num == 0)
     {
-        text = "\nWiFi scan complete !\nNo wifi discovered.\n";
+        text = "\n   WiFi scan complete !\n   No wifi discovered.\n";
     }
     else
     {
-        text = "\nWiFi scan complete !\n";
+        text = "\n   WiFi scan complete !\n";
+        text += "   ";
         text += wifi_num;
-        text += " wifi discovered.\n\n";
+        text += "    wifi discovered.\n\n";
 
         for (int i = 0; i < wifi_num; i++)
         {
+            text += "   ";
             text += (i + 1);
             text += ": ";
             text += WiFi.SSID(i);
@@ -137,12 +137,13 @@ void wifi_test(void)
 
     text = "Connecting to ";
     Serial.print("Connecting to ");
-    gfx->printf("Connecting to\n");
+    gfx->printf("   Connecting to\n");
+    text += "   ";
     text += WIFI_SSID;
     text += "\n";
 
     Serial.print(WIFI_SSID);
-    gfx->printf("%s", WIFI_SSID);
+    gfx->printf("   %s", WIFI_SSID);
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
     uint32_t last_tick = millis();
@@ -164,9 +165,9 @@ void wifi_test(void)
 
     if (!wifi_connection_failure_flag)
     {
-        text += "\nThe connection was successful ! \nTakes ";
-        Serial.print("\nThe connection was successful ! \nTakes ");
-        gfx->printf("\nThe connection was successful ! \nTakes ");
+        text += "\n   The connection was successful ! \nTakes ";
+        Serial.print("\n   The connection was successful ! \nTakes ");
+        gfx->printf("\n   The connection was successful ! \n   Takes ");
         text += millis() - last_tick;
         Serial.print(millis() - last_tick);
         gfx->print(millis() - last_tick);
@@ -176,13 +177,13 @@ void wifi_test(void)
 
         gfx->setTextSize(3);
         gfx->setTextColor(GREEN);
-        gfx->printf("\n\n\nWifi test passed!");
+        gfx->printf("\n\n\n   Wifi test passed!");
     }
     else
     {
         gfx->setTextSize(3);
         gfx->setTextColor(RED);
-        gfx->printf("\n\n\nWifi test error!\n");
+        gfx->printf("\n\n\n   Wifi test error!\n");
     }
 }
 
@@ -211,6 +212,7 @@ void printLocalTime()
     gfx->setCursor(20, 60);
     gfx->print(&timeinfo, "%H:%M:%S");
 }
+
 void SD_Test(void)
 {
     uint8_t SelfLocking_Flag = 0;
@@ -223,16 +225,16 @@ void SD_Test(void)
         SelfLocking_Flag++;
         gfx->setTextSize(2);
         gfx->setTextColor(GREEN);
-        Serial.println("Detecting SD card");
-        gfx->printf("Detecting SD card\n");
+        Serial.println("   Detecting SD card");
+        gfx->printf("\n\n   Detecting SD card\n");
 
         gfx->setTextColor(RED);
-        Serial.println("SD card initialization failed !");
-        gfx->printf("SD card initialization failed !\n");
+        Serial.println("   SD card initialization failed !");
+        gfx->printf("   SD card initialization failed !\n");
         delay(100);
 
         Serial.println(".");
-        gfx->printf(".");
+        gfx->printf("   .");
         delay(100);
 
         Serial.println(".");
@@ -263,8 +265,8 @@ void SD_Test(void)
         gfx->setTextSize(2);
         gfx->setTextColor(GREEN);
 
-        Serial.println("SD card initialization successful !");
-        gfx->printf("SD card initialization successful !\n");
+        Serial.println("   SD card initialization successful !");
+        gfx->printf("\n\n   SD card initialization successful !\n");
         delay(100);
 
         cardType = SD.cardType();
@@ -273,58 +275,58 @@ void SD_Test(void)
         switch (cardType)
         {
         case CARD_NONE:
-            Serial.println("No SD card attached");
-            gfx->printf("No SD card attached\n");
+            Serial.println("   No SD card attached");
+            gfx->printf("   No SD card attached\n");
 
             gfx->setTextSize(3);
             gfx->setTextColor(RED);
-            gfx->printf("\n\n\nSD card test error!\n");
+            gfx->printf("\n\n\n   SD card test error!\n");
             delay(100);
 
             break;
         case CARD_MMC:
-            Serial.print("SD Card Type: ");
-            Serial.println("MMC");
-            Serial.printf("SD Card Size: %lluMB\n", cardSize);
-            gfx->printf("SD Card Type: MMC\nSD Card Size: %lluMB\n", cardSize);
+            Serial.print("   SD Card Type: ");
+            Serial.println("   MMC");
+            Serial.printf("   SD Card Size: %lluMB\n", cardSize);
+            gfx->printf("   SD Card Type: MMC\n   SD Card Size: %lluMB\n", cardSize);
 
             gfx->setTextSize(3);
             gfx->setTextColor(GREEN);
-            gfx->printf("\n\n\nSD card test passed!\n");
+            gfx->printf("\n\n\n   SD card test passed!\n");
             delay(100);
 
             break;
         case CARD_SD:
-            Serial.print("SD Card Type: ");
-            Serial.println("SDSC");
-            Serial.printf("SD Card Size: %lluMB\n", cardSize);
-            gfx->printf("SD Card Type: SDSC\nSD Card Size: %lluMB\n", cardSize);
+            Serial.print("   SD Card Type: ");
+            Serial.println("   SDSC");
+            Serial.printf("   SD Card Size: %lluMB\n", cardSize);
+            gfx->printf("   SD Card Type: SDSC\n   SD Card Size: %lluMB\n", cardSize);
 
             gfx->setTextSize(3);
             gfx->setTextColor(GREEN);
-            gfx->printf("\n\n\nSD card tested correct!\n");
+            gfx->printf("\n\n\n   SD card tested correct!\n");
             delay(100);
 
             break;
         case CARD_SDHC:
-            Serial.print("SD Card Type: ");
+            Serial.print("   SD Card Type: ");
             Serial.println("SDHC");
-            Serial.printf("SD Card Size: %lluMB\n", cardSize);
-            gfx->printf("SD Card Type: SDHC\nSD Card Size: %lluMB\n", cardSize);
+            Serial.printf("   SD Card Size: %lluMB\n", cardSize);
+            gfx->printf("   SD Card Type: SDHC\n   SD Card Size: %lluMB\n", cardSize);
 
             gfx->setTextSize(3);
             gfx->setTextColor(GREEN);
-            gfx->printf("\n\n\nSD card tested correct!\n");
+            gfx->printf("\n\n\n   SD card tested correct!\n");
             delay(100);
 
             break;
         default:
-            Serial.println("UNKNOWN");
-            gfx->printf("UNKNOWN");
+            Serial.println("   UNKNOWN");
+            gfx->printf("   UNKNOWN");
 
             gfx->setTextSize(3);
             gfx->setTextColor(RED);
-            gfx->printf("\n\n\nSD card test error!\n");
+            gfx->printf("\n\n\n   SD card test error!\n");
             delay(100);
 
             break;
@@ -334,7 +336,7 @@ void SD_Test(void)
     {
         gfx->setTextSize(3);
         gfx->setTextColor(RED);
-        gfx->printf("\n\n\nSD card test error!\n");
+        gfx->printf("\n\n\n   SD card test error!\n");
     }
     SD.end();
 }
@@ -427,13 +429,15 @@ void setup()
     Last_X = t.x;
     Last_Y = t.y;
 
-    gfx->fillScreen(WHITE);
+    gfx->fillScreen(RED);
+    // gfx->drawRect(10, 10, 460, 460, RED);
+    // gfx->drawRect(0, 0, 480, 480, RED);
+    gfx->fillRect(10, 10, 460, 460, GREEN);
+
     gfx->setCursor(100, 200);
     gfx->setTextSize(3);
     gfx->setTextColor(PURPLE);
     gfx->printf("Edge Detection");
-
-    gfx->drawRect(0, 0, 480, 480, RED);
 
     gfx->setTextSize(2);
     gfx->setTextColor(NAVY);
