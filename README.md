@@ -3,8 +3,8 @@
  * @version: V1.0.0
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-07-20 15:46:36
+ * @LastEditors: LILYGO_L
+ * @LastEditTime: 2024-07-20 16:05:42
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel_Lite</h1>
@@ -70,7 +70,6 @@ T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be pa
 
 | Example | Support IDE And Version| Description | Picture |
 | ------  | ------  | ------ | ------ | 
-| [GFX_CST3240_Image](./examples/GFX_CST3240_Image) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
 | [GFX_PDQ](./examples/GFX_PDQ) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
 | [IIC_Scan_2](./examples/IIC_Scan_2) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
 | [SD](./examples/SD) | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` |  |  |
