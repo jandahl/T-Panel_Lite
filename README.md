@@ -4,7 +4,7 @@
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
  * @LastEditors: LILYGO_L
- * @LastEditTime: 2024-07-20 16:05:42
+ * @LastEditTime: 2024-07-20 17:35:21
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel_Lite</h1>
@@ -79,7 +79,7 @@ T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be pa
 
 | Firmware | Description | Picture |
 | ------  | ------  | ------ |
-| [Original Test V1.0.5](./firmware/[T-Panel-Lite_V1.0][T-Panel-Lite_Test]_firmware_V1.0.5.bin) | Change the visible pixel of the window to 450px with a green background |  |
+| [Original Test V1.0.5](./firmware/[T-Panel-Lite_V1.0][T-Panel-Lite_Test]_firmware_V1.0.5.bin) | Out-of-factory initial test file |  |
 
 ### PlatformIO
 1. Install[VisualStudioCode](https://code.visualstudio.com/Download),Choose installation based on your system type.

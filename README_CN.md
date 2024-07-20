@@ -4,7 +4,7 @@
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
  * @LastEditors: LILYGO_L
- * @LastEditTime: 2024-07-20 16:05:46
+ * @LastEditTime: 2024-07-20 17:34:53
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel_Lite</h1>
@@ -81,7 +81,7 @@ T-Panel_Lite是T-Panel的精简版，需要特别注意的是T-Panel_Lite版本�
 
 | Firmware | Description | Picture |
 | ------  | ------  | ------ |
-| [Original Test V1.0.5](./firmware/[T-Panel-Lite_V1.0][T-Panel-Lite_Test]_firmware_V1.0.5.bin) | 窗口可视像素改为450px绿底 |  |
+| [Original Test V1.0.5](./firmware/[T-Panel-Lite_V1.0][T-Panel-Lite_Test]_firmware_V1.0.5.bin) | 出厂初始测试文件 |  |
 
 
 ### PlatformIO
