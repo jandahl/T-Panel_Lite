@@ -79,7 +79,7 @@ T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be pa
 
 | Firmware | Description | Picture |
 | ------  | ------  | ------ |
-| [Original Test V1.0.5](./firmware/[T-Panel-Lite_V1.0][T-Panel-Lite_Test]_firmware_V1.0.5.bin) | Out-of-factory original test file |  |
+| [T-Panel-Lite_Test](./firmware/[T-Panel-Lite_V1.0][T-Panel-Lite_Test]_firmware_V1.0.5.bin) | Out-of-factory original test file |  |
 
 ### PlatformIO
 1. Install[VisualStudioCode](https://code.visualstudio.com/Download),Choose installation based on your system type.
