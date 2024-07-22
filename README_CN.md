@@ -108,7 +108,7 @@ T-Panel_Lite是T-Panel的精简版，需要特别注意的是T-Panel_Lite版本�
 
 | Setting                               | Value                                 |
 | :-------------------------------: | :-------------------------------: |
-| Board                                | Dfrobot Firebeetle 2 ESP32-S3|
+| Board                                | ESP32S3 Dev Module            |
 | Upload Speed                     | 921600                               |
 | USB Mode                           | Hardware CDC and JTAG     |
 | USB CDC On Boot                | Enabled                             |
