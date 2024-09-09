@@ -1,17 +1,16 @@
 /*
  * @Description: Adapted from the Adafruit and Xark's PDQ graphicstest sketch.
- * @version: V1.0.0
  * @Author: LILYGO_L
  * @Date: 2023-09-19 14:36:58
- * @LastEditors: LILYGO_L
- * @LastEditTime: 2023-11-23 09:43:59
+ * @LastEditTime: 2024-09-09 09:24:15
  * @License: GPL 3.0
  */
 #include <Arduino_GFX_Library.h>
 #include <Wire.h>
 #include "pin_config.h"
 
-#define GFX_BL 14
+#define GFX_BL LCD_BL
+
 Arduino_DataBus *bus = new Arduino_SWSPI(-1 /* DC */, LCD_CS /* CS */,
                                          SCLK /* SCK */, MOSI /* MOSI */, -1 /* MISO */);
 Arduino_ESP32RGBPanel *rgbpanel = new Arduino_ESP32RGBPanel(
