@@ -4,7 +4,7 @@
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-11-19 09:28:56
+ * @LastEditTime: 2024-11-19 09:33:29
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel-Lite</h1>
@@ -133,6 +133,7 @@ T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be pa
 | Flash Mode                         | QIO 80MHz                         |
 | Flash Size                           | 16MB (128Mb)                     |
 | Core Debug Level                | None                                 |
+| Partition Scheme                | 16M Flash (3MB APP/9.9MB FATFS) |
 | PSRAM                                | QSPI PSRAM                         |
 | Arduino Runs On                  | Core 1                               |
 | Events Run On                     | Core 1                               |
