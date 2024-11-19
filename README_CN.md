@@ -3,24 +3,28 @@
  * @version: V1.0.0
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
- * @LastEditors: LILYGO_L
- * @LastEditTime: 2024-07-20 17:48:54
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-11-19 09:25:17
  * @License: GPL 3.0
 -->
-<h1 align = "center">T-Panel_Lite</h1>
+<h1 align = "center">T-Panel-Lite</h1>
+
+<p align="center" width="100%">
+    <img src="image/12.jpg" alt="">
+</p>
 
 ## **[English](./README.md) | 中文**
 
 ## 版本迭代:
 | Version                               | Update date                       |
 | :-------------------------------: | :-------------------------------: |
-| T-Panel_Lite_V1.0                      | 2023-11-23                         |
+| T-Panel-Lite_V1.0                      | 2023-11-23                         |
 
 ## 购买链接
 
 | Product                     | SOC           |  FLASH  |  PSRAM   | Link                   |
 | :------------------------: | :-----------: |:-------: | :---------: | :------------------: |
-| T-Panel_Lite_V1.0   | ESP32S3 |   16M   | 8M  |  [暂未售卖]()  |
+| T-Panel-Lite_V1.0   | ESP32S3 |   16M   | 8M  |  [暂未售卖]()  |
 
 ## 目录
 - [描述](#描述)
@@ -35,13 +39,27 @@
 
 ## 描述
 
-T-Panel_Lite是T-Panel的精简版，需要特别注意的是T-Panel_Lite版本附带的屏幕是不带触摸版本的屏幕
+T-Panel-Lite是T-Panel的精简版，需要特别注意的是T-Panel-Lite版本附带的屏幕是不带触摸版本的屏幕
 
 ## 预览
 
-### PCB板
+### 实物图
 
-### 渲染图
+<p align="center" width="100%">
+    <img src="image/12.jpg" alt="">
+</p>
+
+---
+
+<p align="center" width="100%">
+    <img src="image/13.jpg" alt="">
+</p>
+
+---
+
+<p align="center" width="100%">
+    <img src="image/14.jpg" alt="">
+</p>
 
 
 ## 模块
@@ -202,7 +220,7 @@ T-Panel_Lite是T-Panel的精简版，需要特别注意的是T-Panel_Lite版本�
 * A. 请按住“BOOT-0”按键重新下载程序。
 
 ## 项目
-* [T-Panel_Lite_V1.0](./project/T-Panel_Lite_V1.0.pdf)
+* [T-Panel-Lite_V1.0](./project/T-Panel-Lite_V1.0.pdf)
 
 ## 资料
 * [Espressif](https://www.espressif.com/en/support/documents/technical-documents)

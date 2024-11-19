@@ -3,24 +3,28 @@
  * @version: V1.0.0
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
- * @LastEditors: LILYGO_L
- * @LastEditTime: 2024-07-22 11:32:35
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-11-19 09:28:56
  * @License: GPL 3.0
 -->
-<h1 align = "center">T-Panel_Lite</h1>
+<h1 align = "center">T-Panel-Lite</h1>
+
+<p align="center" width="100%">
+    <img src="image/12.jpg" alt="">
+</p>
 
 ## **English | [中文](./README_CN.md)**
 
 ## Version iteration:
 | Version                              | Update date                       |
 | :-------------------------------: | :-------------------------------: |
-| T-Panel_Lite_V1.0                      | 2023-11-23                         |
+| T-Panel-Lite_V1.0                      | 2023-11-23                         |
 
 ## PurchaseLink
 
 | Product                     | SOC           |  FLASH  |  PSRAM   | Link                   |
 | :------------------------: | :-----------: |:-------: | :---------: | :------------------: |
-| T-Panel_Lite_V1.0   | ESP32S3 |   16M   | 8M  | [Not yet sold]()  |
+| T-Panel-Lite_V1.0   | ESP32S3 |   16M   | 8M  | [Not yet sold]()  |
 
 ## Directory
 - [Describe](#describe)
@@ -35,13 +39,27 @@
 
 ## Describe
 
-T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be paid to the fact that the screen included with the T-Panel_Lite version is a non-touch version screen.
+T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be paid to the fact that the screen included with the T-Panel-Lite version is a non-touch version screen.
 
 ## Preview
 
-### PCB board
+### Actual Product Image
 
-### Rendering
+<p align="center" width="100%">
+    <img src="image/12.jpg" alt="">
+</p>
+
+---
+
+<p align="center" width="100%">
+    <img src="image/13.jpg" alt="">
+</p>
+
+---
+
+<p align="center" width="100%">
+    <img src="image/14.jpg" alt="">
+</p>
 
 ## Module
 
@@ -198,7 +216,7 @@ T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be pa
 * A. Please hold down the "BOOT-0" button and try downloading the program again.
 
 ## Project
-* [T-Panel_Lite_V1.0](./project/T-Panel_Lite_V1.0.pdf)
+* [T-Panel-Lite_V1.0](./project/T-Panel-Lite_V1.0.pdf)
 
 ## Information
 * [Espressif](https://www.espressif.com/en/support/documents/technical-documents)
