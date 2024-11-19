@@ -4,7 +4,7 @@
  * @Author: LILYGO_L
  * @Date: 2023-09-11 16:13:14
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-11-19 09:33:16
+ * @LastEditTime: 2024-11-19 09:51:16
  * @License: GPL 3.0
 -->
 <h1 align = "center">T-Panel-Lite</h1>
@@ -24,7 +24,7 @@
 
 | Product                     | SOC           |  FLASH  |  PSRAM   | Link                   |
 | :------------------------: | :-----------: |:-------: | :---------: | :------------------: |
-| T-Panel-Lite_V1.0   | ESP32S3 |   16M   | 8M  |  [暂未售卖]()  |
+| T-Panel-Lite_V1.0   | ESP32S3 |   16M   | 8M  |  [LILYGO Mall](https://lilygo.cc/products/t-panel-s3?_pos=1&_sid=f6ce2c79c&_ss=r)  |
 
 ## 目录
 - [描述](#描述)
