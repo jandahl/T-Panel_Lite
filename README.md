@@ -74,7 +74,7 @@ T-Panel_ Lite is a streamlined version of T-Panel,Special attention should be pa
 
 * Screen Model: YDP395BT001
 * Size: 3.95-inch
-* Resolution Ratio: 480x480px
+* Resolution Ratio: 480x480px (note: the casing obscures 10 pixels on each side so visible resolution is 460x460px)
 * Screen Type: IPS
 * Driver Chip: ST7701S
 * Using Bus Communication Protocol: Standard SPI+RGB
